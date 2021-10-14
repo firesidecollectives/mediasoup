@@ -5,6 +5,24 @@ const supportedRtpCapabilities: RtpCapabilities =
 	codecs :
 	[
 		{
+            kind: 'audio',
+            mimeType: 'audio/aac',
+            clockRate: 48000,
+            channels: 2,
+            rtcpFeedback: [
+                { type: 'transport-cc' }
+            ]
+        },
+        {
+            kind: 'audio',
+            mimeType: 'audio/aac',
+            clockRate: 48000,
+            channels: 1,
+            rtcpFeedback: [
+                { type: 'transport-cc' }
+            ]
+        },
+		{
 			kind         : 'audio',
 			mimeType     : 'audio/opus',
 			clockRate    : 48000,
