@@ -5,6 +5,34 @@ const supportedRtpCapabilities: RtpCapabilities =
 	codecs :
 	[
 		{
+            kind: 'audio',
+            mimeType: 'audio/aac',
+            clockRate: 48000,
+            channels: 2,
+            rtcpFeedback: [
+                { type: 'transport-cc' }
+            ]
+        },
+        {
+            kind: 'audio',
+            mimeType: 'audio/aac',
+            clockRate: 48000,
+            channels: 1,
+            rtcpFeedback: [
+                { type: 'transport-cc' }
+            ]
+        },
+		{
+			kind         : 'audio',
+			mimeType     : 'audio/opus',
+			clockRate    : 48000,
+			channels     : 1,
+			rtcpFeedback :
+			[
+				{ type: 'transport-cc' }
+			]
+		},
+		{
 			kind         : 'audio',
 			mimeType     : 'audio/opus',
 			clockRate    : 48000,
@@ -77,9 +105,29 @@ const supportedRtpCapabilities: RtpCapabilities =
 		},
 		{
 			kind                 : 'audio',
+			mimeType             : 'audio/PCMU',
+			preferredPayloadType : 0,
+			clockRate            : 48000,
+			rtcpFeedback         :
+			[
+				{ type: 'transport-cc' }
+			]
+		},
+		{
+			kind                 : 'audio',
 			mimeType             : 'audio/PCMA',
 			preferredPayloadType : 8,
 			clockRate            : 8000,
+			rtcpFeedback         :
+			[
+				{ type: 'transport-cc' }
+			]
+		},
+		{
+			kind                 : 'audio',
+			mimeType             : 'audio/PCMA',
+			preferredPayloadType : 8,
+			clockRate            : 48000,
 			rtcpFeedback         :
 			[
 				{ type: 'transport-cc' }
